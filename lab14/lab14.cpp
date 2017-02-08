@@ -20,9 +20,9 @@ int main()
     cout << endl;
     
     numQuarters = coinsToStart/25;
-    numDimes = (numQuarters%25)/10;
-    numNickels = ((numQuarters%25)%10)/5;
-    numPennies = (((numQuarters%25)%10)%5);
+    numDimes = (coinsToStart%25)/10;
+    numNickels = ((coinsToStart%25)%10)/5;
+    numPennies = (((coinsToStart%25)%10)%5);
                                               // Change all into dollar amounts
     double amtPennies = numPennies * 0.01;
     double amtQuarters = numQuarters * 0.25;
