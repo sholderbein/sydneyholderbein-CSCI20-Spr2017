@@ -1,6 +1,10 @@
 // Created by Sydney Holderbein
 // Date Created: Febuary 3, 2017
 
+/*Inputting coins into a machine. 
+Machine counts the number of each coin and shows the user the breakdown on screen*/
+
+
 #include <iostream>
 using namespace std;
 
@@ -13,7 +17,7 @@ int main()
     int numNickels = 0;
     int numPennies = 0;
     
-    cout << "Enter your coins below";
+    cout << "Enter your coins below";       // user inputs the coins
     cout << endl;
     cin >> coinsToStart;
     cout << endl;
@@ -37,13 +41,13 @@ int main()
                                                 // Show user coins depositted
     cout << "You have submitted: " ;        
     cout << endl;
-    cout << amtPennies << " in pennies";
+    cout << numPennies << " pennies";
     cout << endl;
-    cout << amtNickels << " in nickels";
+    cout << numNickels << " nickels";
     cout << endl;
-    cout << amtDimes << " in dimes";
+    cout << numDimes << " dimes";
     cout << endl;
-    cout << amtQuarters << " in quarters";
+    cout << numQuarters << " quarters";
     cout << endl;
     cout << endl;
                                                // Breaking down the dollar amounts
