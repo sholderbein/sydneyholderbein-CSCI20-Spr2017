@@ -1,0 +1,7 @@
+/*Guessing game
+Computer generates numbers 1-100 on screen
+Computer randomly selects a number within 1-100, call this n
+Computer promts viewer to click a number
+If the clicked number is below n show "higher"
+If the clicked number is above n show "lower"
+If the clicked number correct show "Correct!"

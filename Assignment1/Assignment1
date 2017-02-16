@@ -1,0 +1,27 @@
+// Created By: Sydney Holderbein
+// Date Created: Febuary 16, 2017
+
+#include <iostream>
+using namespace std;
+int main()
+
+{
+int HourWeek=40             //Naming Variables
+int HourPay=10
+int HealthIns=130
+int Taxes=.17
+
+
+cout<<"Employee Name"; endl;
+cout<<"Hours Per Week:";    //Show Hours
+cout<< HourWeek; endl; 
+cout<<"Hourly Pay:";        //Show Pay
+cout<< HourPay;
+
+
+cout<<"Weekly Pay"; endl;
+cout<< HourWeek*HourPay = a << endl;
+cout<<"Health Insurance Deductions"; endl;
+cout<< a-HealthIns << endl;
+
+
