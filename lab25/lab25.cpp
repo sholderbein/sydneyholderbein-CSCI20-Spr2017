@@ -8,7 +8,7 @@ of meta data about each book (title, author, copyright year), and print them bac
 #include <string>
 using namespace std;
 
-class BookInformation {
+class BookInformation {                                                         // desribe when and how clas is used
     public:
        void SetBookTitle  (string title);                                       // Mutator
        void SetBookAuthor (string author);                                      // Mutator
@@ -17,11 +17,16 @@ class BookInformation {
        string GetBookTitle  ();                                                 // Accessor
        string GetBookAuthor ();                                                 // Accessor
        int GetBookYear      ();                                                 // Accessor
+       
+       void printBookInformation();                                             // Show the book information
+        
+        BookInformation(title, author, year);
+        
         
     private:                                                                    // Private Variables
-        string bookTitle;
-        string bookAuthor;
-        int bookYear;
+        string bookTitle_;
+        string bookAuthor_;
+        int bookYear_;
     
     };
     
@@ -33,8 +38,8 @@ class BookInformation {
         bookAuthor = author;
     }
     
-    void BookInformation::SetBookYear(int year) {                               // Function to show book year
-        bookYear = year;
+    void SetBookYear(int year); {                                               // Function to show book year
+        GetBookYear();
     }
     
     string BookInformation::GetBookTitle(){                                        // Pulls from private & returns tile
