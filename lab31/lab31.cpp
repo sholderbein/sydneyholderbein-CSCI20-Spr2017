@@ -4,16 +4,17 @@
 //This program will create a program for a cell phone company to determine the charge for a service
 
 #include <iostream>
+#include <cstring>
 using namespace std;
   
 int main(){
 
-string deviceCharge = dumb;
-string monthlyCharge;
-string unlimitedData;
-double payPerDataCharge;
-string corporateDiscount;
-double familyPlanDiscount;
+string deviceCharge = "dumb";
+string monthlyCharge = "no";
+string unlimitedData = "no";
+double payPerDataCharge = 0 ;
+string corporateDiscount = "no";
+double familyPlanDiscount = 0.0;
 
 double amount1 = 0.0;
 double amount2 = 0.0;
@@ -52,26 +53,26 @@ cin >> familyPlanDiscount;
 cout << endl;
 
 
-if (deviceCharge == dumb){
+if (deviceCharge == "dumb"){                                                    // device type - dumb
     amount1 = 0.0;
 }
-else if(deviceCharge == smart){
+else if(deviceCharge == "smart"){                                               // device type - smart
     amount1 = 5.0;    
 }
-else {
-    amount1 = 10.0;
+else {                                                                          // device type - tablet
+    amount1 = 10.0;                                     
 }
 
 
-if (monthlyCharge == yes){
-    amount2 = 30.0;
+if (monthlyCharge == "yes"){                                                    // monthly charge - unlimited
+    amount2 = 30.0; 
 }
 else{
-    amount2 = 0.0;
+    amount2 = 0.0;                                                              // monthly charge - restricted
 }
 
 
-if(unlimitedData == yes){
+if(unlimitedData == "yes"){
     amount3 = 45.0;
 }
 else{
@@ -82,18 +83,18 @@ if(payPerDataCharge == 1){
     amount4 = 5.0;
 }
 
-else if((payPerDataCharge > 1)&&(payPerDataCharge<5){
+else if((payPerDataCharge > 1)&&(payPerDataCharge <= 5)){                       // pay per data charge
     amount4 = (payPerDataCharge*.75)+4.25;
 }
 
 else if ((payPerDataCharge > 5)&&(payPerDataCharge<15)){
-    amount4 = ((payPerDataCharge/15)*3))+(((payPerDataCharge%15)/5)*1.5)+(((payPerDataCharge%15)%5)*.75) + 4.25;
+    amount4 = (payPerDataCharge * .75) + ((payPerDataCharge/5) * 7.5) + ((payPerDataCharge/15)*3);
 }
 else {
-    cout << "error";
+    amount4=0.0;
 }
 
-if (corporateDiscount == yes){
+if (corporateDiscount == "yes"){
     amount5 = .90;
 }
 else{
@@ -108,21 +109,12 @@ else{
     amount6 = 0;
 }
 
-amount7 = (amount1 + amount2 + amount3 + amount4 + amount6)*amount5
+amount7 = (amount1 + amount2 + amount3 + amount4 + amount6)*amount5;
  
 
-cout << "User Cell Phone Plan: " << endl;
+cout << "User Cell Phone Plan Cost: $";
 cout << amount7;
 
-return;
 
-
-
-
-
-
-
-
-    
     
 }
