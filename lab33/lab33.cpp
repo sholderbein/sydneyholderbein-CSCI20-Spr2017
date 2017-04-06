@@ -22,15 +22,6 @@ int main(){
     cout << "guess a number between 1 and 50" << endl;
     cin >> userGuess;
     
-    if (userGuess < 1){
-        cout << "error";
-        return 0;
-    }
-    
-    if (userGuess > 50){
-        cout << "error" ;  
-        return 0;
-    }
     
     for (i=1 ; i<10 ; i++){
     
@@ -39,7 +30,6 @@ int main(){
                 cout << "too high "<< endl;
                 
             }
-            
             else {
                 cout << "too low"<< endl;
                 
@@ -49,11 +39,8 @@ int main(){
         }
         cout << "Just right!";
     
-    if (userGuess < 1)
-    cout << "error";
     
-    if (userGuess > 1)
-    cout < "error" ;   
+    
     
 }
 
