@@ -34,9 +34,27 @@ GameName pile1;
 GameName pile2;
 
 pile1.SetNumCandies(8);
-cout << pile1.GetNumCandies();
-    
-    
+cout << "We are starting with " << pile1.GetNumCandies() << " in the first pile" << endl << endl;
+
+pile2.SetNumCandies(10);
+cout <<"We are starting with " << pile2.GetNumCandies() << " in the second pile" << endl << endl;
+
+int pileNum = 0;
+cout << "Would you like to pick from the first pile or second?" << endl;
+cin >> pileNum;
+cout << endl;
+
+switch (pileNum) {
+    case 1:
+        cout << "How many would you like to pick from pile 1?" << endl;
+        break;
+    case 2:
+        cout << "How many would you like to pick from pile 2?" << endl;
+        break;
+        
+        
+}
+
     
     
     
