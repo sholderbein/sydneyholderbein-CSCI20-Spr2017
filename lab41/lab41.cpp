@@ -3,49 +3,82 @@
 
 // This program will use an array to manipulate intgers
 
-    
 #include <iostream>
 using namespace std;
 
 class ArrayTools{
     public:
-        const int SIZE = 10;                                                        
+        int classArray[];
         int i=0;                                                                // Loop index
         int minVal;                                                             // minimum value
         int maxVal;                                                             // maximum value    
-        int myArray[SIZE];
+        void Print();
+        int Find_min(int, int);
+        int Find_max(int, int);
+        int Find_sum();
+        int Is_sorted();
+        int Search(int);
+        ArrayTools(int myArray[50]);
+        
+        
+        
 };
-
-    void Print(){                                                   // print array elements
-        for (i=0; i<SIZE; ++i);
-        cout << myArray[i];
+    void ArrayTools::Print(){                                                               // print array elements
+        for (i=0; i<50; ++i);
+        cout << classArray[i];
         
     }
-        
-    int Find_min(int, int){                                         // find minimum value in the array
-        for (i=0; i<SIZE; ++i)
-            if (myArray[i] < minVal){
-                minVal = myArray[i];
+            
+    int ArrayTools::Find_min(int tempA, int tempB){                                                     // find minimum value in the array
+        for (i=tempA; i<tempB; ++i)
+            if (classArray[i] < minVal){
+                minVal = classArray[i];
             }
         return minVal;                                                          // return minimum value in the array
     }
     
-    int Find_max(int, int){
-         for (i=0; i<SIZE; ++i)
-            if (myArray[i] > maxVal){
-                maxVal = myArray[i];
+    int ArrayTools::Find_max(int tempC, int tempD){
+         for (i=tempC; i<tempD; ++i)
+            if (classArray[i] > maxVal){
+                maxVal = classArray[i];
             }
         return maxVal;
     }
     
-    int Find_sum(){
-        for (i=0; i<SIZE; i++){
-            int sumVal = (sumVal + myArray[SIZE]);
+    int ArrayTools::Find_sum(){
+        int sumVal;
+        for (i=0; i<50; i++){
+            sumVal = (sumVal + classArray[i]);
         }
         return sumVal;
    }
    
+    int ArrayTools::Search(int searchValue){
+        for (i=0; i<50; i++){
+            if (searchValue == classArray[i]){
+                return i;
+            }
+        return -1;            
+        }  
+    }
+        
+    int ArrayTools::Is_sorted(){
+        while (i<50){
+            if (classArray[i]>classArray[i+1]){
+                return false;
+            }
+            else{
+                i++;
+            }
+        }
+        return true;
+    }
     
+    ArrayTools::ArrayTools(int myArray[]){
+        for (i=0; i<50; i++){
+        classArray[i] = myArray[i];
+    }}
+
 
 
 int main()
@@ -55,8 +88,9 @@ int main()
     int myArray[SIZE];
     
     for(int i = 0; i<SIZE;i++){
-        cin<<myArray[i];
+        cin>>myArray[i];
     }
+    
     ArrayTools a(myArray);
     
     a.Print();
