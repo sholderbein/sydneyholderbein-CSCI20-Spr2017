@@ -8,22 +8,22 @@ using namespace std;
 
 class ArrayTools{
     public:
-        int classArray[];
+        int classArray[50];
         int i=0;                                                                // Loop index
         int minVal;                                                             // minimum value
         int maxVal;                                                             // maximum value    
-        void Print();
         int Find_min(int, int);
         int Find_max(int, int);
         int Find_sum();
         int Is_sorted();
         int Search(int);
-        ArrayTools(int myArray[50]);
+        ArrayTools(int myArray[]);
+        int Print();
         
         
         
 };
-    void ArrayTools::Print(){                                                               // print array elements
+    int ArrayTools::Print(){                                                               // print array elements
         for (i=0; i<50; ++i);
         cout << classArray[i];
         
@@ -94,6 +94,7 @@ int main()
     ArrayTools a(myArray);
     
     a.Print();
+    cout << endl;
     cout<<"Min: "<<a.Find_min(0, 4)<<endl;
     cout<<"Max: "<<a.Find_max(5, 10)<<endl;
     cout<<"Sum = "<<a.Find_sum()<<endl;
