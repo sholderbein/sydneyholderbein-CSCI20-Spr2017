@@ -23,13 +23,13 @@ class ArrayTools{
         
         
 };
-    int ArrayTools::Print(){                                                               // print array elements
+    int ArrayTools::Print(){                                                    // print array elements
         for (i=0; i<50; ++i);
         cout << classArray[i];
         
     }
             
-    int ArrayTools::Find_min(int tempA, int tempB){                                                     // find minimum value in the array
+    int ArrayTools::Find_min(int tempA, int tempB){                             // find minimum value in the array
         for (i=tempA; i<tempB; ++i)
             if (classArray[i] < minVal){
                 minVal = classArray[i];
@@ -37,7 +37,7 @@ class ArrayTools{
         return minVal;                                                          // return minimum value in the array
     }
     
-    int ArrayTools::Find_max(int tempC, int tempD){
+    int ArrayTools::Find_max(int tempC, int tempD){                             // Finding maximum value
          for (i=tempC; i<tempD; ++i)
             if (classArray[i] > maxVal){
                 maxVal = classArray[i];
@@ -45,7 +45,7 @@ class ArrayTools{
         return maxVal;
     }
     
-    int ArrayTools::Find_sum(){
+    int ArrayTools::Find_sum(){                                                 // 
         int sumVal;
         for (i=0; i<50; i++){
             sumVal = (sumVal + classArray[i]);
