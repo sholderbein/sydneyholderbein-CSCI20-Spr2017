@@ -37,8 +37,11 @@ int compPick=0;
 GameName pile1;
 GameName pile2;
 
+cout << "We're going to play a game where there are two piles of candies, ";
+cout << "you are playing against the computer to see who can pick the last candy."<<endl<<endl;
+
 pile1.SetNumCandies(8);                                                         // declarations of pile beginning numbers
-cout << "We are starting with " << pile1.GetNumCandies() << " in the first pile" << endl << endl;
+cout << "We are starting with " << pile1.GetNumCandies() << " in the first pile" << endl;
 
 pile2.SetNumCandies(10);
 cout <<"We are starting with " << pile2.GetNumCandies() << " in the second pile" << endl << endl;
@@ -54,7 +57,6 @@ if (firstPile!=0 && secondPile!=0){
 
 cout << "Would you like to pick from the first pile or second?" << endl;        // prompt user to pick a pile
 cin >> pileNum;
-cout << endl;
     if (pileNum>2){
         cout << "Please pick a valid pile." << endl;
         cin >> pileNum;
@@ -64,14 +66,12 @@ switch (pileNum) {
     case 1:
         cout << "How many would you like to pick from pile 1?" << endl;
         cin >> userPick;
-        cout << endl;
         firstPile = firstPile - userPick;
         cout << "Pile 1 now has " << firstPile << " candies" << endl;
         break;
     case 2:
         cout << "How many would you like to pick from pile 2?" << endl;
         cin >> userPick;
-        cout << endl;
         secondPile = secondPile - userPick;
         cout << "Pile 2 now has " << secondPile << " candies" << endl;
         break;
@@ -86,7 +86,7 @@ if (firstPile==0 || secondPile==0){
 }
  
 }
-        
+        cout << endl;
                                                                                 //NOW THE COMPUTER NEEDS TO HAVE A TURN
     int randNum=0;                                                              // Using random function to pick a pile
     srand(time(0));                                                             // Using the time as a base for the random number
@@ -97,14 +97,14 @@ if (firstPile==0 || secondPile==0){
         compPick = (rand() % firstPile + 1);
         cout << "The computer took " << compPick << " from the first pile. " << endl;
         firstPile = firstPile - compPick;
-        cout << "Pile 1 now has " << firstPile << " candies." << endl;          // prompt user how many are left on the screen
+        cout << "Pile 1 now has " << firstPile << " candies." << endl <<endl;   // prompt user how many are left on the screen
     }
 
     if (randNum >= 50){                                 
     compPick = (rand() % secondPile + 1);
     cout << "The computer took " << compPick << " from the second pile. " << endl;
     secondPile = secondPile - compPick;
-    cout << "Pile 2 now has " << secondPile << " candies." << endl;
+    cout << "Pile 2 now has " << secondPile << " candies." << endl << endl;
 
     }
     if (firstPile==0 || secondPile==0){

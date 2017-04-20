@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <cstring>
+#include <cmath>
 using namespace std;
 
 int main(){
@@ -60,10 +61,10 @@ int main(){
    
    
    if (maritalStatus == 2){                                                     // FOR MARREID
-        double amount1 = -7800;
+        amount1 = -7800;
         grossWageMarried = grossWageMarried + amount1;
         
-        if (amount1 > 0){
+        if (grossWageMarried > 0){
             keepGoing = 1;
         }
         else {
@@ -72,10 +73,10 @@ int main(){
     }
     
     else if (maritalStatus == 1){                                               // FOR SINGLE
-        double amount1 = -3900;
+        amount1 = -3900;
         grossWageSingle = grossWageSingle + amount1;
         
-        if (amount1 > 0){
+        if (grossWageSingle > 0){
             keepGoing = 1;
         }
         
@@ -92,38 +93,38 @@ int main(){
    switch (keepGoing){
    case 1:
 
-    if (amount1 <= 17850){                                                      // married & wage below 17850
-        double amount2 = .10;
+    if (grossWageMarried <= 17850){                                             // married & wage below 17850
+        amount2 = .10;
         break;
     }
     
     else if (grossWageMarried <= 72500){                                        // married & wage below 72500
-        double amount3 = 1785 + (.15*(grossWageMarried - 17850));
+        amount3 = 1785 + (.15*(grossWageMarried - 17850));
         break;
     }
     
     else if (grossWageMarried >= 72501){                                        // married & wage babove 72500
-        double amount4 = 9982.50 + (.85*(grossWageMarried - 72500));
+        amount4 = 9982.50 + (.85*(grossWageMarried - 72500));
         break;
     }
     
    if (grossWageSingle <= 8925){                                               // single & wage below 8925
-        double amount2 = .10;
+        amount2 = .10;
         break;
     }
     
     if (grossWageSingle <= 36250){                                             // single & wage below 36250
-        double amount3 = 892.50 + (.15*(grossWageMarried - 8925));
+        amount3 = 892.50 + (.15*(grossWageSingle - 8925));
         break;
     }
     
     if (grossWageSingle <= 87850){                                              // single & wage below 87850
-        double amount4 = 4991.25 + (.25*(grossWageMarried - 36250));
+        amount4 = 4991.25 + (.25*(grossWageSingle - 36250));
         break;
     }
     
     if (grossWageSingle >= 87851){                                              // single & wage above 87851
-        double amount5 = 19891.25 + (.28*(grossWageMarried-87850));
+        amount5 = 19891.25 + (.28*(grossWageSingle-87850));
         break;
     }
     
@@ -135,12 +136,14 @@ int main(){
     cout << adjustedWage << endl;
     cout << "Total Tax Owed: $";
     
-    if (adjustedWage < taxWithheld){
+    if (adjustedWage == taxWithheld){
         cout << "0";
     }
     
-    if (adjustedWage > taxWithheld){
-        cout << (adjustedWage * (amount1) + amount2 + amount3 + amount4 + amount5);
+    if (adjustedWage != taxWithheld){
+        if( adjustedWage < taxWithheld)
+        cout << "Your return is: " << endl;
+        cout << fabs((adjustedWage * amount2) + amount3 + amount4 + amount5);
     }
     
     
