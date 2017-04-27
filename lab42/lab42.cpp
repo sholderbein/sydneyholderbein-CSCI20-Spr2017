@@ -42,7 +42,7 @@ puppyBreeds [5] = 18;
 puppyBreeds [6] = 26;
 puppyBreeds [7] = 12;
 puppyBreeds [8] = 22;
-puppyBreeds [9] = 13;
+puppyBreeds [9] = 13; 
 
 
 for (i=0; i<numDogs; i++){

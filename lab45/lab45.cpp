@@ -9,12 +9,12 @@ using namespace std;
 
 int main(){
     
-    string userFirstName = "Sydney";
+    string userFirstName = "Sydney";                                            // user names
     string userLastName  = "Holderbein";
     char choice = 'Y';
     
     
-    cout << "Please enter your first name" << endl;
+    cout << "Please enter your first name" << endl;                             // get user input
     cin  >> userFirstName;
     cout << "Please enter your last name"  << endl;
     cin  >> userLastName;
