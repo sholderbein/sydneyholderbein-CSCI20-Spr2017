@@ -20,19 +20,33 @@ class GradingAnswers{
         double score;
 };
     
-void setCorrectAnswers(21){
+void setCorrectAnswers[21]{
         for (int i=0; i<21; i++){
-        userAnswers[i] = studentAnswers[i];
+        string userAnswers[i] = studentAnswers[i];
     }    
 }   
-        
-        
+
+int getCorrectAnswers[21]{
+         return userAnswers;
+}
+
+
+
+
+
 int main(){
+    
+    
+    ifstream file("tuna.txt");
+    
+    for (int i=0; i<22; i++){
+    tuna >> 
     
     cout << "please enter student answers, hit enter after each:";
     
     for (int i=0; i<21; i++){
-    cin  >> GradingAnswers::studentAnswers[i];
+    file  >> userAnswers;
+    
     }
  
     
