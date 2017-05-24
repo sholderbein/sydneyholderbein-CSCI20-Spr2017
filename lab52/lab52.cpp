@@ -15,7 +15,15 @@ using namespace std;
  */
  
  
+ 
  int main() {
+  
+  int randomNumber();
+  
+  randomNumber(){
+  srand(time(0));
+  return ((rand()% 10) + 1);
+}
   // Create a MyClass Object
   MyClass object;
 

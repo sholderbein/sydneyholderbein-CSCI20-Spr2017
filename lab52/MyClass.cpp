@@ -20,8 +20,3 @@ int MyClass::GetNumber(){
    return num_;
 }
 
-
-int randomNumber(){
-   srand(time(0));
-   return ((rand()% 10) + 1);
-}
